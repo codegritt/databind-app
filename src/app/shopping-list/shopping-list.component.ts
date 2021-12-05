@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { threadId } from 'worker_threads';
 
-import { Ingredient } from '../shared/ingredient.model';
+import { Ingredient } from 'src/app/shared/ingredient.model';
 
 @Component({
   selector: 'app-shopping-list',
@@ -17,5 +18,7 @@ export class ShoppingListComponent implements OnInit {
 
   ngOnInit() {
   }
-
+onIngredientAdded(ingredient: Ingredient){
+  this.ingredients.push(ingredient);
+}
 }
